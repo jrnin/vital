@@ -10,7 +10,6 @@ import {
   Mail,
   Instagram,
   Facebook,
-  Linkedin,
   Ruler,
   ShieldCheck,
   Wrench,
@@ -51,7 +50,7 @@ export type CoverageCity = {
 
 export const vitalNorte = {
   name: "Vital Norte",
-  tagline: "Construindo com excelência no Norte do Brasil desde 1990",
+  tagline: "Construindo com excelência no norte do país desde 2013",
   ctaPrimary: "Solicitar orçamento",
   ctaSecondary: "Ver serviços",
   heroImage:
@@ -85,11 +84,7 @@ export const contact = {
       href: "https://facebook.com/vitalnorte.construtora",
       icon: Facebook,
     },
-    {
-      label: "LinkedIn",
-      href: "https://linkedin.com/company/vital-norte",
-      icon: Linkedin,
-    },
+    
   ],
   quick: [
     { label: "Telefone", value: "(31) 98888-7777", href: "tel:+5531988887777", icon: Phone },
@@ -306,10 +301,10 @@ export const coverageCities: CoverageCity[] = [
 ]
 
 export const stats = [
-  { label: "Anos de atuação", value: "35+" },
-  { label: "Projetos entregues", value: "300+" },
+  { label: "Anos de atuação", value: "8+" },
+  { label: "Projetos entregues", value: "150+" },
   { label: "Cidades atendidas", value: "20+" },
-  { label: "Foco em SST", value: "100%" },
+  { label: "Foco em Pavimentação", value: "100%" },
 ] as const
 
 export const location = {

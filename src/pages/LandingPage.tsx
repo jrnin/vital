@@ -2,6 +2,7 @@ import * as React from "react"
 import {
   Calendar,
   ChevronRight,
+  MessageCircle,
   Sparkles,
 } from "lucide-react"
 
@@ -181,7 +182,7 @@ function Hero() {
       <Container className="relative py-16 text-white sm:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div>
-            <Badge className="vn-glass inline-flex gap-2 py-1">
+            <Badge className="vn-glass inline-flex gap-2 py-1 text-white/80">
               <Sparkles className="h-3.5 w-3.5 vn-icon-float" />
               Engenharia, segurança e qualidade
             </Badge>
@@ -190,7 +191,7 @@ function Hero() {
               {vitalNorte.tagline}
             </h1>
             <p className="mt-4 max-w-prose text-pretty text-white/80">
-              Obras civis e industriais, infraestrutura e retrofits. Atendimento
+              Obras civis e industriais, infraestrutura e pavimentação. Atendimento
               consultivo e entregas com padrão técnico, prazo e transparência.
             </p>
 
@@ -224,7 +225,7 @@ function Hero() {
               <CardHeader>
                 <CardTitle className="text-base">Por que a Vital Norte?</CardTitle>
                 <CardDescription>
-                  Processo claro, equipe técnica e foco em segurança do trabalho.
+                  Processo claro, equipe técnica e foco na entrega.
                 </CardDescription>
               </CardHeader>
               <CardContent className="grid gap-3 sm:grid-cols-2">
@@ -233,7 +234,7 @@ function Hero() {
                     title: "Planejamento",
                     desc: "Cronograma realista e comunicação frequente.",
                   },
-                  { title: "SST", desc: "Rotinas, treinamentos e auditorias." },
+                  { title: "Profissionais", desc: "Equipe técnica qualificada." },
                   {
                     title: "Qualidade",
                     desc: "Checklists e entrega técnica.",
@@ -255,12 +256,6 @@ function Hero() {
                 ))}
               </CardContent>
             </GlassCard>
-
-            <p className="mt-3 text-xs text-muted-foreground">
-              Dica: substitua a logo placeholder em{" "}
-              <code className="text-foreground">src/assets/vital-norte-logo.svg</code>{" "}
-              pela sua logo real quando quiser.
-            </p>
           </div>
         </div>
       </Container>
@@ -278,8 +273,7 @@ function About() {
               Sobre a {vitalNorte.name}
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Atuação regional, excelência técnica e foco em relacionamento de longo
-              prazo.
+            Há mais de 7 anos, a <b>Vital Norte Construtora</b> é sinônimo de qualidade e confiança no setor da construção civil em toda a região. Nossa trajetória é marcada por crescimento contínuo e superação, fruto de uma filosofia empresarial dinâmica que prioriza a inovação, a excelência nos resultados e o desenvolvimento sustentável dos nossos negócios, colaboradores e comunidades.
             </p>
             <div className="mt-6 space-y-4 text-sm text-muted-foreground">
               {vitalNorte.about.map((p, idx) => (
@@ -366,7 +360,7 @@ function Timeline() {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-              História (1990–2026)
+              Nossa História
             </h2>
             <p className="mt-3 max-w-prose text-muted-foreground">
               Principais marcos desde a fundação até a presença consolidada.
@@ -498,7 +492,7 @@ function CoverageMap() {
               </div>
 
               <div className="mt-3 text-xs text-muted-foreground">
-                * Mapa: OpenStreetMap (Leaflet). Clique nos marcadores para ver o cliente.
+                Clique nos marcadores para ver o cliente.
               </div>
             </CardContent>
           </GlassCard>
@@ -849,6 +843,21 @@ export default function LandingPage() {
       </main>
       <Footer />
       <CookieConsent />
+      <a
+        href="https://wa.me/5538988299306"
+        target="_blank"
+        rel="noreferrer"
+        className={cn(
+          "fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full shadow-lg",
+          "bg-[#25D366] text-white hover:bg-[#1ebe5b]",
+          "ring-1 ring-black/10 dark:ring-white/10",
+          "transition-transform duration-200 hover:scale-105 active:scale-95"
+        )}
+        aria-label="Falar no WhatsApp"
+        title="Falar no WhatsApp"
+      >
+        <MessageCircle className="h-6 w-6" />
+      </a>
     </div>
   )
 }
